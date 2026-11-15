@@ -41,12 +41,12 @@ fn fixed(value: f64) -> str:
   title: Bounded nonnegative decimal text
   summary: Rounds to three decimal places and removes trailing fractional zeros.
   ```
-  var scaled: i64 = cast(value * 1000.0 + 0.5, i64)
-  var whole: i64 = scaled / 1000
-  var fraction: i64 = (scaled - (scaled / 1000) * 1000)
+  scaled: i64 = cast(value * 1000.0 + 0.5, i64)
+  whole: i64 = scaled / 1000
+  fraction: i64 = (scaled - (scaled / 1000) * 1000)
   if fraction == 0:
     return integer(whole)
-  var result: str = integer(whole) + "." + digit(fraction / 100)
+  result: str = integer(whole) + "." + digit(fraction / 100)
   if (fraction - (fraction / 100) * 100) != 0:
     result = result + digit(((fraction / 10) - ((fraction / 10) / 10) * 10))
   if (fraction - (fraction / 10) * 10) != 0:
@@ -64,8 +64,8 @@ fn number(value: f64) -> str:
     return "-" + number(0.0 - value)
   if value >= 0.001 && value < 1000000.0:
     return fixed(value)
-  var mantissa: f64 = value
-  var exponent: i64 = 0
+  mantissa: f64 = value
+  exponent: i64 = 0
   while mantissa >= 10.0:
     mantissa = mantissa / 10.0
     exponent = exponent + 1

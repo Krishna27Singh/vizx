@@ -3,10 +3,10 @@ name = "vizx"
 version = "0.1.0"
 edition = "2026"
 description = "Modular static plotting, written entirely in Arx."
-requires-arx = ">=1.25.0,<1.26.0"
+requires-arx = ">=1.28.0,<1.29.0"
 
 [build-system]
-dependencies = ["arxlang ==1.25.0"]
+dependencies = ["arxlang ==1.28.0"]
 
 [build]
 package = "vizx"

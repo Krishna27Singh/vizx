@@ -9,7 +9,7 @@ extension is needed.
 
 ## Quick start
 
-Use Arx **1.25.0**, the latest published release when this project was
+Use Arx **1.28.0**, the latest published release when this project was
 bootstrapped. Install Clang and the Arx tools, or use `conda.yaml`:
 
 ```sh
@@ -26,13 +26,13 @@ import line from vizx.express
 import Figure from vizx.figure
 
 fn main() -> i32:
-  var x: list[f64]
-  var y: list[f64]
+  x: list[f64]
+  y: list[f64]
   for value in [1.0, 2.0, 3.0]:
     x.append(value)
   for value in [4.0, 2.0, 7.0]:
     y.append(value)
-  var fig: Figure = line(x=x, y=y, title="My first plot")
+  fig: Figure = line(x=x, y=y, title="My first plot")
   fig.write_image("build/first.svg")
   return 0
 ````
@@ -42,7 +42,7 @@ mkdir -p build
 arx examples/quickstart.x --output-file build/quickstart --run
 ```
 
-Arx 1.25.0 requires dynamic lists at function boundaries. A typed empty list
+Arx 1.28.0 requires dynamic lists at function boundaries. A typed empty list
 and `append` provide that ownership; list literals can be iterated as above.
 
 For the complete gallery and compiled tests:
@@ -85,7 +85,7 @@ is no central switch over chart types and no compiler/runtime modification.
   implemented. Committed PNGs are review previews of the SVG gallery.
 - Titles use XML CDATA, so ordinary Unicode, `&`, and `<` work without entity
   escaping. Titles must not contain `]]>` or XML control characters. Arx
-  1.25.0 does not expose the string traversal needed to validate or escape
+  1.28.0 does not expose the string traversal needed to validate or escape
   those sequences; this restriction applies to trusted local titles.
 - SVG coordinates and ticks are rounded to three fractional digits, using
   scientific notation for very small or large values. Repeated text assembly
