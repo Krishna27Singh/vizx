@@ -1,4 +1,4 @@
-arxlang==1.25.0
+arxlang==1.28.0
 arxpm==1.9.0
 makim==1.29.0
 # Makim imports Click directly; newer Typer vendors it instead.

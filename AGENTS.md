@@ -4,9 +4,9 @@ Vizx implementation, examples, and behavior tests are Arx source (`.x`).
 Keep the implementation entirely in Arx. Do not introduce a Python, C/C++, JS,
 Matplotlib, or Plotly renderer. Tooling used by Arx itself is not part of Vizx.
 
-Use two-space indentation, typed arguments, and valid Douki module docstrings.
-Treat Arx 1.25.0 compiled behavior as authoritative; syntax appearing in the
-lexer does not establish usable language support.
+Use two-space indentation, typed arguments, name-first declarations, and valid
+Douki module docstrings. Treat Arx 1.28.0 compiled behavior as authoritative;
+syntax appearing in the lexer does not establish usable language support.
 
 Each chart owns its geometry in one module. Share validation, scales, axes,
 numeric formatting, SVG primitives, and figure ownership. A new chart adds its
